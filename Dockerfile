@@ -26,7 +26,10 @@ ENV FLOWS=flows.json
 
 	
 #Récupération des fichiers SAP
+
 RUN git clone https://github.com/sragneau/sapnwrfc.git
+
+
 #Copie du sdk SAP 
 RUN cd sapnwrfc ;chmod +x SAPCAR_721-20010450;./SAPCAR_721-20010450 -xvf *.SAR;cd nwrfcsdk;cp ./lib/* /usr/lib;cp ./include/* /usr/include
 RUN mkdir -p /$HOME/.node-red/nodes
@@ -34,8 +37,8 @@ RUN mkdir -p /$HOME/.node-red/nodes/icons
 
 #Copie des noeuds spécifiques 
 WORKDIR /usr/src/node-red
-#RUN cd sapnwrfc ;cp sap.png /$HOME/.node-red/nodes/icons;cp bapi.js /$HOME/.node-red/nodes/;cp bapi.html /$HOME/.node-red/nodes/
-RUN cd sapnwrfc ;ls -l;
+RUN cd sapnwrfc ;cp sap.png /$HOME/.node-red/nodes/icons;cp bapi.js /$HOME/.node-red/nodes/;cp bapi.html /$HOME/.node-red/nodes/
+#RUN cd sapnwrfc ;ls -l;
 
 RUN npm install sapnwrfc
 
