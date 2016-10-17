@@ -35,7 +35,7 @@ RUN mkdir -p /$HOME/.node-red/nodes/icons
 #Copie des noeuds spécifiques 
 WORKDIR /usr/src/node-red
 #RUN cd sapnwrfc ;cp sap.png /$HOME/.node-red/nodes/icons;cp bapi.js /$HOME/.node-red/nodes/;cp bapi.html /$HOME/.node-red/nodes/
-RUN ls -l;
+RUN cd sapnwrfc ;ls -l;
 
 RUN npm install sapnwrfc
 
