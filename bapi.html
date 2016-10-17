@@ -1,0 +1,57 @@
+<script type="text/javascript">
+    RED.nodes.registerType('BAPI',{
+        category: 'SAP',
+        color: '#FFA500',
+        defaults: {
+            bapi: {value:""},
+	    ip: {value:""},
+	    env: {value:""},
+	    user: {value:""},
+	    pwd: {value:""},
+            mandant: {value:""}
+        },
+        inputs:1,
+        outputs:1,
+        icon: "./sap.png",
+        label: function() {
+            return this.name||"BAPI";
+        }
+    });
+</script>
+
+<script type="text/x-red" data-template-name="BAPI">
+
+    <div class="form-row">
+        <label for="node-input-bapi"><i class="icon-tag"></i> BAPI</label>
+        <input type="text" id="node-input-bapi" placeholder="Nom de la BAPI">
+    </div>
+
+    <div class="form-row">
+       <label for="node-input-ip"><i class="icon-tag"></i> IP</label>
+       <input type="text" id="node-input-ip">
+    </div>
+    <div class="form-row">
+       <label for="node-input-env"><i class="icon-tag"></i> ENV</label>
+       <input type="text" id="node-input-env">
+    </div>
+    <div class="form-row">
+       <label for="node-input-user"><i class="icon-tag"></i>Utilisateur</label>
+       <input type="text" id="node-input-user">
+    </div>
+    <div class="form-row">
+       <label for="node-input-pwd"><i class="icon-tag"></i>Mot de passe</label>
+       <input type="text" id="node-input-pwd">
+    </div>
+    <div class="form-row">
+       <label for="node-input-mandant"><i class="icon-tag"></i>Mandant</label>
+       <input type="text" id="node-input-mandant">
+    </div>
+    
+</script>
+
+<script type="text/x-red" data-help-name="BAPI">
+    <p>A node to call BAPI SAP RFC module.</p>
+</script>
+
+
+
