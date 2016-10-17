@@ -20,7 +20,7 @@ RUN npm install -g node-red
 
 # User configuration directory volume
 VOLUME ["/data"] 
-#EXPOSE 1880:1880
+EXPOSE 1880
 # Environment variable holding file path for flows configuration 
 ENV FLOWS=flows.json
 
