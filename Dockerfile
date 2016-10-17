@@ -20,9 +20,7 @@ RUN npm install -g node-red
 
 # User configuration directory volume
 VOLUME ["/data"] 
-EXPOSE 1880:1880
-EXPOSE 3000:3000
-EXPOSE 3001:3001
+#EXPOSE 1880:1880
 # Environment variable holding file path for flows configuration 
 ENV FLOWS=flows.json
 
@@ -35,5 +33,5 @@ RUN cd sapnwrfc ;chmod +x SAPCAR_721-20010450;./SAPCAR_721-20010450 -xvf *.SAR;c
 
 RUN npm install sapnwrfc
 
-CMD ["npm", "start", "--", "--userDir", "/data"]
+#CMD ["npm", "start", "--", "--userDir", "/data"]
 
