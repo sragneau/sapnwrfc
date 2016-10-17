@@ -1,4 +1,10 @@
-"dependencies": {
-    "node-red": "0.14.x",           
-    "node-red-node-rbe": "*"        
-},
+{
+	"name": "redway",
+	"version": "1.0.0",
+
+    "dependencies": {
+        "node-red": "0.14.x",           
+        "node-red-node-rbe": "*"        
+    }
+    
+}
