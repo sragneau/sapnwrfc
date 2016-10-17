@@ -18,7 +18,8 @@ ENV FLOWS=flows.json
 #Récupération des fichiers SAP
 RUN git clone https://github.com/sragneau/sapnwrfc.git
 #Copie du sdk SAP 
-RUN cd sapnwrfc ;chmod +x SAPCAR_721-20010450;./SAPCAR_721-20010450 -xvf *.SAR;cd nwrfcsdk;cp ./lib/* /usr/lib;cp ./include/* /usr/include
+RUN cd sapnwrfc ;chmod +x SAPCAR_721-20010450;./SAPCAR_721-20010450 -xvf *.SAR;
+#cd nwrfcsdk;cp ./lib/* /usr/lib;cp ./include/* /usr/include
 
 
 RUN npm install sapnwrfc
