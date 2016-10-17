@@ -2,6 +2,7 @@
 FROM mhart/alpine-node:4
 
 # GITHUB
+RUN apk update
 RUN apk add git
 
 # Home directory for Node-RED application source code.
